@@ -14,11 +14,7 @@ public class User
     public Id Id { get; }
     public Picture Picture { get; }
     public string Nat { get; }
-
-    public User(string email)
-    {
-        Email = email;
-    }
+    
     public User(string gender,
         Name name,
         Location location,

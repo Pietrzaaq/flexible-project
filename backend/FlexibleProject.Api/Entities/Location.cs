@@ -5,6 +5,6 @@ public record Location(
     string City,
     string State,
     string Country,
-    int Postcode,
+    string Postcode,
     Coordinates Coordinates,
     Timezone Timezone);

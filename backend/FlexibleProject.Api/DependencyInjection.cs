@@ -14,10 +14,10 @@ public static class DependencyInjection
         var config = TypeAdapterConfig.GlobalSettings;
         config.Scan(Assembly.GetExecutingAssembly());
         services.AddSingleton(config);
-        services.AddSingleton<IMapper, ServiceMapper>();
+        services.AddScoped<IMapper, ServiceMapper>();
 
         // Services
-        services.AddSingleton<IUsersService, UsersService>();
+        services.AddScoped<IUsersService, UsersService>();
         
         return services;
     }

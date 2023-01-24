@@ -1,5 +1,5 @@
 using FlexibleProject.Api.Abstractions;
-using FlexibleProject.Api.Entities;
+using FlexibleProject.Api.DTO;
 using Microsoft.AspNetCore.Mvc;
 
 namespace FlexibleProject.Api.Controllers;
@@ -11,13 +11,13 @@ public class UsersController : ControllerBase
 
     private readonly IUsersService _usersService;
     
-    public UsersController(ILogger<UsersController> logger, IUsersService usersService)
+    public UsersController(IUsersService usersService)
     {
         _usersService = usersService;
     }
 
     [HttpGet]
-    public async Task<ActionResult<List<User>>> Get(int numberOfUsers)
+    public async Task<ActionResult<List<UserDto>>> Get(int numberOfUsers)
     {
         var users = await _usersService.GetUsers(numberOfUsers);
 

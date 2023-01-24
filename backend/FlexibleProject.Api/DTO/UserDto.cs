@@ -2,5 +2,8 @@
 
 public class UserDto
 {
-    public string Name { get; set; }
+    public string Picture { get; set; }
+    public string First { get; set; }
+    public string Last { get; set; }
+    public string Email { get; set; }
 }
