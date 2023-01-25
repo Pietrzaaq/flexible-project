@@ -21,8 +21,8 @@ public class UsersService : IUsersService
     {
         var maxNumberOfUsers = 10;
         var users = new List<User>();
-        
-        if (numberOfUsers == 0 || numberOfUsers > 9)
+
+        if (numberOfUsers < 1)
         {
             numberOfUsers = maxNumberOfUsers;
         }
@@ -48,8 +48,6 @@ public class UsersService : IUsersService
             User user = jsonUser.ToObject<User>();
             users.Add(user);
         }
-        
-        // var result = new List<User> {new("jhondoe@wp.pl")};
 
         return users.Select(x => _mapper.Map<UserDto>(x)).ToList();
     }

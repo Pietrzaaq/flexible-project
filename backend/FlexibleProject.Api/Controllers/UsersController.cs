@@ -10,7 +10,7 @@ public class UsersController : ControllerBase
 {
 
     private readonly IUsersService _usersService;
-    
+
     public UsersController(IUsersService usersService)
     {
         _usersService = usersService;
