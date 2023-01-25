@@ -1,0 +1,5 @@
+# Setup
+
+```sh
+dotnet run
+```
