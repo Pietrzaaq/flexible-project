@@ -1,5 +1,0 @@
-# Setup
-
-```sh
-dotnet run
-```
