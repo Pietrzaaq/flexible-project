@@ -8,7 +8,7 @@ npm run dev
 ```
 Should be running on port: 5174 (http://localhost:5174/)
 
-## backend backend 
+## backend setup 
 ```sh
 cd backend
 dotnet run --project .\FlexibleProject.Api\
